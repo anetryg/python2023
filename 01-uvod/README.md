@@ -87,7 +87,7 @@ Python, jeden z nejoblíbenějších programovacích jazyků dnešní doby, má 
 
 * **Vývoj mobilních aplikací**: S pomocí některých frameworků lze Python použít i pro vývoj mobilních aplikací.
 
-![Alt text](https://github.com/anetryg/python_2023/blob/main/01-uvod_git/images/most_used_programming_language.png)
+![Alt text](https://github.com/anetryg/python2023/blob/main/01-uvod/images/most_used_programming_language.PNG)
 
 ## Vytvoření programu
 Vývojová prostředí se liší od aplikací jako Word nebo Poznámkový blok tím, že neprovádíme otevírání jednotlivých souborů, ale celé složky (adresáře). Skutečné programy bývají často poměrně rozsáhlé, a proto je pro lepší organizaci ukládáme do více souborů. V případě použití Visual Studio Code otevřeme celý adresář a můžeme pohodlně přepínat mezi různými soubory.
