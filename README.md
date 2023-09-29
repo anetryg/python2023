@@ -40,9 +40,9 @@ Každá kapitola obsahuje odkaz na odpovídající složku v tomto repozitáři
 ## Harmonogram cvičení 2023
 | datum | téma |
 | --- | --- |
-| 25.9. | úvod |
+| 25.9. | nebude |
 | 2.10. | nebude |
-| 9.10. | nebude |
+| 9.10. | úvod |
 | 16.10. | datové typy a podmínky |
 | 23.10. | cykly a importy |
 | 30.10. | funkce |
