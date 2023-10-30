@@ -89,7 +89,7 @@ while True:
 
 
 ### Importy
-Importy slouží k nahrání jiného kódu (knihovny) do toho vašeho. Knihovny jsou části kódu, které napsal někdo před vámi, protože chtěl rozšířit nějakou funkcionalitu. Sám Python obsahuje zabudované knihovny pro různé použití. Existují však i knihovny neoficiální, které lze najít na internetu. Jedním z managerů, kde lze najít knihovny na jednom místě je [pip](https://pypi.org/). My si na začátek vyzkoušíme jenom vygenerování náhodného čísla.
+Importy slouží k nahrání jiného kódu (knihovny) do toho vašeho. Knihovny jsou části kódu, které napsal někdo před vámi, protože chtěl rozšířit nějakou funkcionalitu. Sám Python obsahuje zabudované knihovny pro různé použití. Existují však i knihovny neoficiální, které lze najít na internetu. Jedním z managerů, kde lze najít knihovny na jednom místě je [pip](https://pypi.org/). My si na začátek vyzkoušíme vygenerování náhodného čísla.
 ```python
 # pro generovani nahodnych cisel slouzi knihovna random
 # nejdrive naimportujeme kod (knihovnu) pomoci klicoveho slova import a nazvu knihovny
@@ -102,6 +102,19 @@ print(random.randint(1, 21))
 # pokud bychom chteli vynechat random ve volani funkce, tak muzeme naimportovat jen funkci
 from random import randint
 print(randint(1, 21))
+```
+
+Jeden z užitečných modulů nese název math, a obsahuje mnoho standardních matematických funkcí. Mimo jiné obsahuje funkce pro zaokrouhlování nahoru a dolů. Pokud chceme modul math použít, musíme jej nejdříve importovat příkazem
+
+```python
+import math
+```
+
+Příkazy import pro přehlednost zapisujeme na začátek programu. Poté, co tento příkaz zadáme Pythonu, můžeme volat všechny funkce z tohoto modulu tak, že vždy před název funkce pomocí tečky připojíme název modulu, ze kterého funkce pochází. Například
+
+```python
+zaokrouhlene_cislo = math.ceil(3.14)
+print(zaokrouhlene_cislo)
 ```
 
 

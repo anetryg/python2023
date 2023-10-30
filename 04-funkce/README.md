@@ -127,6 +127,54 @@ printer(first='Ahoj', second='jak', third='to jde')
 # third => to jde
 ```
 
+
+### Typování funkcí
+Python patří mezi dynamicky typové jazyky, což znamená, že při vytvoření proměnné neříkáme, jaký typ hodnoty do ní budeme ukládat. Od verze 3.5 ale podporuje typing. Můžeme tedy říct, jaký typ hodnoty by měla obsahovat nějaká proměnná, Python to však nekontroluje a neukončí program s chybou, pokud do proměnné vložíme hodnotu jiného typu. Typování ale funguje jako nápověda pro programátory a především vývojová prostředí, která pak umějí vývojářům lépe napovídat při psaní programů a případně je upozornit, pokud plánují do proměnné vložit něco, co tam nepatří.
+
+Níže je příklad funkce get_mark() s typováním. Typovat můžeme jednotlivé parametry i návratovou hodnotu, jejíž typ je za "šipkou" ->.
+
+```python
+def get_mark(points: int, bonus: int = 0) -> int:
+    if points + bonus <= 60:
+        mark = 5
+    elif points + bonus <= 70:
+        mark = 4
+    elif points + bonus <= 80:
+        mark = 3
+    elif points + bonus <= 90:
+        mark = 2
+    else:
+        mark = 1
+    return mark
+
+print(get_mark(50, 30))
+```
+
+### List Comprehension
+List Comprehension je elegantní a kompaktní způsob, jak vytvářet seznamy v Pythonu. Umožňuje vytvořit seznam pomocí jednoho řádku kódu, což je často čitelnější a efektivnější než tradiční způsoby vytváření seznamů. List Comprehension využívá jednoduchou syntaxi a lze ho použít pro filtrace, transformaci a vytváření seznamů na základě existujících dat.
+
+Základní syntaxe List Comprehension vypadá takto:
+
+```python
+novy_seznam = [vyraz for prvek in stary_seznam if podminka]
+```
+
+ - vyraz určuje, jakým způsobem se transformuje prvek ze starého seznamu do nového seznamu.
+ - prvek je proměnná, která prochází všechny prvky ze starého seznamu.
+ - stary_seznam je původní seznam, ze kterého vytváříme nový seznam.
+ - podminka (volitelná) umožňuje filtrovat prvky, které budou zahrnuty do nového seznamu.
+ 
+Nyní můžete vidět, jakým způsobem můžeme použít List Comprehension k vytvoření seznamu obsahujícího druhé mocniny čísel od 1 do 5:
+
+```python
+druhe_mocniny = [x**2 for x in range(1, 6)]
+print(druhe_mocniny)
+# Výstup: [1, 4, 9, 16, 25]
+```
+
+List Comprehension umožňuje efektivně pracovat s daty a zkrátit kód, což z něj činí užitečný nástroj pro mnoho běžných úkolů v Pythonu.
+
+
 ### Užitečné funkce
 Pokud vám nebude něco jasné, tak si danou funkci vygooglete včetně dalších příkladů použití.
 #### `append(obj)`
