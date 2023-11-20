@@ -22,18 +22,18 @@ Každá kapitola obsahuje odkaz na odpovídající složku v tomto repozitáři
     * návratová hodnota funkce
     * proměnlivé počty argumentů
     * kontext (scope) proměnné
-5. [Výjimky a práce se soubory](https://github.com/anetryg/python2023/tree/main/06-vyjimky_a_prace_se_soubory)
+5. [Výjimky a práce se soubory](https://github.com/anetryg/python2023/tree/main/05-vyjimky_a_prace_se_soubory)
     * výjimky včetně možnosti jejich vyhození
     * try/except blok
     * načtení souboru
     * zápis do souboru
-6. [Úvod do objektově orientovaného programování](https://github.com/anetryg/python2023/tree/main/07-oop_uvod)
+6. [Úvod do objektově orientovaného programování](https://github.com/anetryg/python2023/tree/main/06-oop_uvod)
     * základy OOP
     * implementace v Pythonu
-7. [OOP - dědičnost, procvičování](https://github.com/anetryg/python2023/tree/main/08-oop_dedicnost)
+7. [OOP - dědičnost, procvičování](https://github.com/anetryg/python2023/tree/main/07-oop_dedicnost)
     * dědičnost
     * procvičování OOP
-8. [ArcPy](https://github.com/anetryg/python2023/tree/main/09-arcpy)
+8. [ArcPy](https://github.com/anetryg/python2023/tree/main/08-arcpy)
     * ArcGIS Pro
     * úvod do ArcPy
 
@@ -54,11 +54,6 @@ Každá kapitola obsahuje odkaz na odpovídající složku v tomto repozitáři
 | 11.12. | test 2 |
 | 18.12. | opravy |
 
-
-## Hodnocení
-* 2 bodované domácí úkoly (každy za 10 bodů)
-* 2 testy (každý za 40 bodů)
-* nutnost získat alespoň 60 % bodů
 
 ## Kurzy na internetu
 * [w3 schools](https://www.w3schools.com/python/)
