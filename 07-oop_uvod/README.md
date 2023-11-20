@@ -14,7 +14,7 @@ Dokumentace:
 Kód důkladně okomentujte a vytvořte krátký dokumentační soubor, kde popíšete, jakým způsobem jste získali data, jak jste je zpracovali a jak se používá váš skript.
 
 
-## Objektově orientované programování (OOP)
+# Objektově orientované programování (OOP)
 Objektové orientované programování má celou řadu výhod oproti klasickému deklarativnímu paradigmatu. Pro větší projekty umožňuje znovupoužitelnost kódu, zaručuje větší modularitu a přehlednost kódu a při správném použití dokáže zjednodušit celý návrh.
 Výhody OOP:
  * rychlejší a levnější vývoj větších aplikací
@@ -26,24 +26,24 @@ Nevýhody OOP:
 
 Pro použití objektově orientovaného programování potřebujeme používat jazyk, který toto paradigma podporuje. Mezi takové jazyky patří například Java, C++, Python, C#, Swift nebo Scala. Naopak mezi jazyky, které OOP nepodporují, patří C, Haskell, Fortran nebo Pascal.
 
-### Proč OOP?
+## Proč OOP?
 
 Představme si, že máme za úkol vytvořit systém pro správu informací o knihách v knihovně. Chceme evidovat názvy knih, autory a počet dostupných kopií. Zvažme různé způsoby, jak tato data uložit.
 
 Můžeme začít vytvořením seznamu pro každou knihu, kde budeme ukládat název knihy, autora a počet dostupných kopií.
 
 ```python
-book_1 = ["Vládce Prstenů", "J.R.R. Tolkien", 10]
-book_2 = ["Harry Potter", "J.K. Rowling", 15]
+book_1 = ["Pán Prstenů", "J.R.R. Tolkien", 10]
+book_2 = ["Harry Potter", "J.K. Rowling", 8]
 ```
 
-Na první pohled mohou kolegové považovat poslední hodnotu za hodnocení knihy. Abychom tomu předešli, můžeme přidat komentáře, ale to není ideální řešení.
+Na první pohled mohou kolegové považovat poslední hodnotu za hodnocení knihy. Abychom tomu předešli, můžeme přidat komentáře, ale ani to není ideální řešení.
 
 Další možností je použití slovníku, kde budeme ukládat informace o každé knize ve formě klíč-hodnota.
 
 ```python
-book_1 = {"title": "Vládce Prstenů", "author": "J.R.R. Tolkien", "copies_available": 10}
-book_2 = {"title": "Harry Potter", "author": "J.K. Rowling", "copies_available": 15}
+book_1 = {"title": "Pán Prstenů", "author": "J.R.R. Tolkien", "copies_available": 10}
+book_2 = {"title": "Harry Potter", "author": "J.K. Rowling", "copies_available": 8}
 ```
 
 Nyní můžeme přemýšlet o tom, jak bychom řešili situaci, kdy čtenář chce vypůjčit knihu. Podobně jako v předchozím příkladu, snížíme počet dostupných kopií, ale musíme zkontrolovat, zda čtenář nemůže půjčit více kopií, než kolik jich je k dispozici.
@@ -55,6 +55,10 @@ def borrow_book(copies_to_borrow, book):
         print("Kniha půjčena.")
     else:
         print("Omlouváme se, nemáme dostatek kopií k vypůjčení.")
+
+borrow_book(5, book_1)
+# Vypíše Kniha půjčena.
+
 ```
 
 Toto řešení může být rozsáhlejší a obtížněji udržovatelné, pokud máme více funkcí a knih v našem systému. Pro eliminaci těchto problémů můžeme využít objektově orientované programování (OOP).
@@ -62,15 +66,14 @@ Toto řešení může být rozsáhlejší a obtížněji udržovatelné, pokud m
 V OOP můžeme vytvořit třídu, která reprezentuje knihu a obsahuje atributy (název, autor, dostupné kopie) a metody (např. půjčení knihy). Každá kniha v našem systému bude instancí této třídy, což zjednoduší přidávání nových knih a zajiští jednotné rozhraní pro práci s knihami v celém programu.
 
 
-
-### Objekty a třídy
+## Objekty a třídy
 Objekty a třídy jsou základem objektově orientovaného programování (OOP), které využívá třídy a instance (objekty).
 
 Objekty slouží k reprezentaci entit v reálném světě, jako například zaměstnanci ve firmě. Na rozdíl od slovníků umožňují objekty propojit data o zaměstnancích s kódem, který zpracovává tato data.
 
 Vytvoření třídy je prvním krokem. Můžeme si představit třídu jako prázdný formulář, který obsahuje kolonky, které by měly být vyplněny. Objekt pak představuje vyplněný formulář s konkrétními daty.
 
-Podobně jako vyplňujeme více formulářů na základě jednoho formuláře, může vzniknout několik objektů na základě jedné třídy. Objekty jsou nezávislé, takže změny v jednom objektu neovlivňují ostatní. Tento princip se nazývá zapouzdření (encapsulation).
+Podobně jako vyplňujeme více formulářů na základě jednoho formuláře, může vzniknout několik objektů na základě jedné třídy. Objekty jsou nezávislé, takže změny v jednom objektu neovlivňují ostatní. Tento princip se nazývá zapouzdření.
 
 Třídy mají atributy (uchovávají hodnoty) a metody (vykonávají příkazy). Atributy jsou podobné hodnotám ve slovníku, a metody jsou obdobou funkcí. Každá metoda pracuje s daty konkrétního objektu.
 
@@ -101,7 +104,7 @@ Díky použití třídy a objektů můžeme jednoduše vytvářet a spravovat za
 
 Objektově orientované programování nám tak umožňuje vytvářet struktury, které lépe modelují reálný svět a usnadňují správu a manipulaci s daty.
 
-Oproti motivačnímu příkladu jsme stále neměli vyřešené "bezpečné" čerpání dovolené. Nyní se zaměříme na tuto problematiku a obohatíme naši třídu o novou metodu - take_holiday(). Tato metoda bude hlídat, aby zaměstnanec/zaměstnankyně nepřečerpal(a) svůj nárok na dovolenou.
+Nyní se zaměříme na problematiku čerpání dovolené a  obohatíme naši třídu o novou metodu - take_holiday(). Tato metoda bude hlídat, aby zaměstnanec/zaměstnankyně nepřečerpal(a) svůj nárok na dovolenou.
 
 ```python
 class Employee:
@@ -162,5 +165,5 @@ frantisek = Employee("František Novák", "konstruktér", 25)
 print(frantisek)
 ```
 
-Tím jsme ukázali, jak vytvořit třídu, objekty a jak s nimi pracovat, a zároveň jsme implementovali bezpečné čerpání dovolené pomocí nové metody.
+Tím jsme ukázali, jak vytvořit třídu, objekty a jak s nimi pracovat, a zároveň jsme implementovali čerpání dovolené pomocí nové metody.
 
